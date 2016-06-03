@@ -20,6 +20,26 @@ edit the network:
 
   this is the 'default'. it can be changed, but more than one file needs to be changed.)
 
+
+**If Node.js is not installed**
+
+_Install Node.js v4.x_
+
+With a Node.js version manager (recommended):
+
+Without a Node.js version manager:
+Follow the instructions for installing node **version 4.x** at https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
+
+**If Node.js is installed, but is older than version 4.x** (apt-get installs v0.10 by default)
+
+_Upgrade to node v4.x_
+
+.. code::
+
+    sudo npm cache clean -f
+    sudo npm install -g n
+    sudo n 4.4
+
 Install the prerequisite packages:
 
 .. code::
@@ -28,7 +48,6 @@ Install the prerequisite packages:
     sudo apt-get install mongodb
     sudo apt-get install snmp
     sudo apt-get install ipmitool
-    sudo apt-get install nodejs nodejs-legacy npm
 
     sudo apt-get install ansible
     sudo apt-get install apt-mirror
